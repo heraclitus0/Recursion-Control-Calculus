@@ -83,3 +83,16 @@ Recursion-Control-Calculus/
 ├── naive_rcc.py            # Simplified RCC implementation (baseline logic)
 ├── rcc_prototype.py        # Prototype with recursive control flow and drift mechanics
 
+---
+
+## Citation
+
+**Zenodo Paper**: Pulikanti, S. B. (2025). Recursion Control Calculus: A Formal Framework for Epistemic Realignment Under Volatility. Zenodo. https://doi.org/10.5281/zenodo.15730197
+---
+
+## Author
+
+**Bharadwaj**  
+Independent Researcher  
+bharadwajpulikanti11@gmail.com
+
