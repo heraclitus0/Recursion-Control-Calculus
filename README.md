@@ -73,12 +73,15 @@ Comparative run to contrast linear state update (naïve) vs RCC-based control.
 
 ## Repository Structure
 
-.
-├── rcc_prototype.py # 200-cycle RCC prototype
-├── baseline_stresstest.py # 500 & 600-cycle baseline + stress-test simulations
-├── naive_rcc.py # Naïve vs RCC comparative run
-├── output_images/ # Simulation output plots
-└── README.md # Project documentation
+Recursion-Control-Calculus/
+│
+├── LICENSE.txt                  
+├── README.md                   
+│
+├── baseline_stresstest.py     
+├── naive_rcc.py                
+├── rcc_prototype.py            
+
 
 ---
 
