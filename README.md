@@ -1,105 +1,88 @@
-Recursion Control Calculus: Prototype and Simulation Framework
-Overview
-This repository provides a formal implementation of the Recursion Control Calculus (RCC) framework for managing epistemic state evolution in AI systems exposed to stochastic perturbations. RCC introduces a calculus of recursion operators, cumulative misalignment control fields, dynamic rupture thresholds, and epistemic state reset mechanisms.
+# Recursion Control Calculus (RCC): Prototype and Simulation Framework
 
-The implementation empirically validates the theoretical control properties derived from the RCC formal axiomatic system and corresponding meta-theorems.
+## Overview
 
-The repository includes three principal simulation configurations:
+This repository contains the first formal implementation of **Recursion Control Calculus (RCC)**—a control-theoretic framework for managing epistemic state evolution in agents exposed to stochastic volatility.
 
-Prototype Recursion Control Simulation (200 cycles)
+RCC introduces a symbolic and operational calculus involving:
+- Recursion operators for epistemic state manipulation  
+- Cumulative misalignment control fields  
+- Adaptive rupture thresholds  
+- Reset mechanisms to enforce epistemic coherence
 
-Baseline Recursion System (500 cycles)
+The framework is built atop a formal axiomatic system and meta-theorems defining recursion control dynamics. This codebase validates RCC’s stability, responsiveness, and fault-tolerance through multiple simulation environments.
 
-Stress-Test Recursion System (600 cycles)
+---
 
-Naïve Agent vs. RCC Agent Comparative Simulation (300 cycles)
+## Simulation Configurations
 
-Each simulation environment tests recursion system resilience under controlled and amplified volatility, confirming the RCC framework’s operational stability and control-theoretic guarantees.
+### 1. **Prototype RCC Simulation** (200 cycles)  
+Tests recursion control under moderate epistemic perturbations.
 
-Repository Structure
+- **Initial State**: 𝓥₀ = 0.5  
+- **Perturbation Model**: Gaussian N(0, 0.3²)  
+- **Dynamic Threshold**: Scaled by misalignment + Gaussian N(0, 0.025²)  
+- **Realignment**: Triggered when Δ(t) ≤ Θ(t) via Continuity Monad  
+- **Resets**: When rupture thresholds are breached  
+
+**Outputs**:
+- Evolution of the memory projection field  
+- Growth of epistemic misalignment  
+- Timeline of distortion and rupture events  
+
+---
+
+### 2. **Baseline RCC System** (500 cycles)  
+Recursion under consistent volatility.
+
+- **Perturbation**: Gaussian N(0, 0.18²)  
+- **Thresholds**: Proportional to misalignment  
+- **Behavior**: Continuous misalignment accumulation + rupture-triggered resets  
+
+**Outputs**:
+- Projection vs reception field evolution  
+- Temporal distortion patterns  
+- Misalignment accumulation curve  
+- Rupture event mapping  
+
+---
+
+### 3. **Stress-Test RCC System** (600 cycles)  
+Tests system resilience under amplified volatility.
+
+- **Perturbation**: Gaussian N(0, 0.35²)  
+- **Aggressive Misalignment Scaling**  
+- **Dynamic Threshold Perturbation**  
+
+**Outputs**:
+- Projection vs reception drift  
+- Cumulative distortion and rupture spread  
+- Fault-line tracing of epistemic collapse events  
+
+---
+
+### 4. **Naïve Agent vs RCC Agent** (300 cycles)  
+Comparative run to contrast linear state update (naïve) vs RCC-based control.
+
+**Outputs**:
+- Epistemic trajectories of both agents  
+- Misalignment accumulation in RCC agent  
+- Rupture event log (RCC agent only)  
+
+---
+
+## Repository Structure
+
 .
-├── rcc_prototype.py               # 200-cycle prototype RCC simulation
-├── baseline_stresstest.py         # Baseline and stress-test recursion systems
-├── naive_rcc.py                   # Naïve vs RCC agent comparative simulation
-├── output_images/                 # Directory for result plots
-└── README.md                      # Documentation
-Simulation Descriptions
-Prototype Recursion Control Simulation
-A 200-cycle demonstration of RCC recursion control dynamics under moderate epistemic volatility.
-Key parameters:
+├── rcc_prototype.py # 200-cycle RCC prototype
+├── baseline_stresstest.py # 500 & 600-cycle baseline + stress-test simulations
+├── naive_rcc.py # Naïve vs RCC comparative run
+├── output_images/ # Simulation output plots
+└── README.md # Project documentation
 
-Initial epistemic state: 𝓥₀ = 0.5
+---
 
-Reception perturbation: Gaussian N(0, 0.3²)
+## License
 
-Dynamic rupture threshold scaling by cumulative misalignment and Gaussian noise N(0, 0.025²)
+This project is licensed under the [MIT License](./LICENSE) © 2025 Pulikanti Sashi Bharadwaj.
 
-Recursion realignments are performed via a Continuity Monad operator when distortion Δ(t) ≤ Θ(t), with resets to baseline when ruptures occur.
-
-Outputs:
-
-Memory projection field evolution
-
-Cumulative epistemic misalignment growth
-
-Distortion and rupture event timeline
-
-Baseline Recursion System
-A 500-cycle recursion control simulation under moderate perturbation conditions.
-Key parameters:
-
-Reception perturbation: Gaussian N(0, 0.18²)
-
-Dynamic rupture threshold scaling proportional to misalignment
-
-Continuous misalignment accumulation and rupture-triggered resets
-
-Outputs:
-
-Memory projection field vs reception field
-
-Distortion over time
-
-Cumulative epistemic misalignment growth
-
-Projected divergence and rupture occurrences
-
-Stress-Test Recursion System
-A 600-cycle recursion control simulation under amplified epistemic volatility.
-Key parameters:
-
-Reception perturbation: Gaussian N(0, 0.35²)
-
-Aggressive misalignment scaling and dynamic rupture threshold perturbation
-
-Outputs:
-
-Memory projection field vs reception field
-
-Distortion over time
-
-Cumulative epistemic misalignment growth
-
-Projected divergence and rupture occurrences
-
-Naïve vs RCC Agent Comparative Simulation
-A 300-cycle comparative simulation contrasting a naïve agent with a linear state update rule against a RCC agent employing recursion control calculus.
-
-Outputs:
-
-Epistemic state evolution for both agents
-
-Cumulative epistemic misalignment for the RCC agent
-
-Rupture event log for the RCC agent
-
-License
-MIT License
-
-Copyright (c) 2025 Pulikanti Sashi Bharadwaj
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
