@@ -72,7 +72,8 @@ Comparative run to contrast linear state update (naïve) vs RCC-based control.
 ---
 
 
-<pre> ### 📁 Repository Structure ```text Recursion-Control-Calculus/
+<pre> Repository Structure 
+  ```text Recursion-Control-Calculus/
   │
   ├── LICENSE.txt # MIT License 
   ├── README.md # Project documentation 
