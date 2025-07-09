@@ -73,14 +73,14 @@ Comparative run to contrast linear state update (naïve) vs RCC-based control.
 
 
 <pre> Repository Structure 
-  ```text Recursion-Control-Calculus/
+  Recursion-Control-Calculus/
   │
   ├── LICENSE.txt # MIT License 
   ├── README.md # Project documentation 
   │
   ├── baseline_stresstest.py # Load/stress testing for control logic stability 
   ├── naive_rcc.py # Simplified RCC implementation (baseline logic) 
-  ├── rcc_prototype.py # Prototype with recursive control flow and drift mechanics ``` </pre>  
+  ├── rcc_prototype.py # Prototype with recursive control flow and drift mechanics
 
 
 ---
